@@ -1,0 +1,209 @@
+/* ==|====================
+   Layout/Header
+   ======================= */
+
+.g-header {
+  width: 100%; height: auto; @include position(fixed, 0 null null 0); padding: 10px 0; margin: 0; background-color: transparent; z-index: 100; border-bottom: none; @include transition(transform 200ms ease, all 0.25s); box-shadow: 0 0 0 rgba($black, 0.0);
+  &.activeHead {
+    background-color: rgba($white, 0.95); box-shadow: 0 4px 10px rgba($black, 0.10);
+  }
+}
+
+.brand {
+  width: 100%; height: auto; padding: 0; margin: 0;
+  a {
+    display: block;
+    img {
+      display: block; width: 100%; max-width: 200px; height: auto; margin: 0 auto 0 0; padding: 0;
+    }
+    .site-title {
+      font-size: 0; text-indent: -9999px; color: $white; opacity: 0; margin: 0; padding: 0;
+    }
+  }
+}
+.brandMain {
+  width: 100%; height: auto; padding: 0; margin: 0 0 20px 0;
+  img {
+    display: block; width: 100%; max-width: 200px; height: auto; margin: 0 auto 0 auto; padding: 0;
+  }
+}
+.phoneMobile {
+  margin: 0 0 0 0; padding: 0 0 0 0; text-align: right; display: block;
+  a {
+    color: $white; font-size: rem(16px);
+  }
+}
+
+.toolsHead {
+  width: 100%; height: auto; padding: 0; margin: 0 0 0 0;
+  ul {
+    padding: 0; margin: 0; display: none; list-style-type: none;
+    li {
+      list-style-type: none; padding: 5px 10px; margin: 0;
+      a {
+        color: $white; font-size: rem(20px); @include transition(all 0.23s ease);
+        img {
+          display: block; width: 20px; height: auto;
+        }
+        &:hover {
+          color: $c9;
+        }
+      }
+    }
+  }
+  .conteBtnHead {
+    display: none; text-align: right;
+  }
+}
+
+.menuMain {
+  width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative;
+  nav {
+    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative; display: none;
+    ul {
+      width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative; list-style-type: none; @include displayFlex(flex, row, flex-end, center, wrap);
+      li {
+        list-style-type: none; padding: 0 0 0 0; margin: 0 30px 0 0; position: relative;
+        a {
+          color: $c7; margin: 0 0 0 0; padding: 0; font-size: rem(20px); font-weight: 500; text-transform: lowercase;
+        }
+        &:last-child {
+          margin: 0 0 0 0;
+        }
+        &:after {
+          content: ''; width: 0; height: 3px; padding: 0 0; margin: 0 0 0 0; background-color: $col2; @include position(absolute, null null -4px 0); @include transition(all 0.25s ease);
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-mobile-btn {
+  width: 40px; height: 40px; display: block; margin: 0 0 0 auto; padding: 0; position: relative; border: none; @include box-sizing(border-box); background-color: transparent; cursor: pointer;
+  span {
+    width: 15px; height: 2px; @include position(absolute, 50% 8px null null); background-color: $col2; @include transform(translateY(-50%)); opacity: 1; @include transition(opacity 0.18s ease-in-out);
+  }
+  &:before, &:after {
+    content: ''; width: 25px; height: 2px; @include position(absolute, null null null 7px); background-color: $col2; @include transition(transform 0.25s ease);
+  }
+  &:before {
+    top: 10px; @include transform(rotate(0deg));
+  }
+  &:after {
+    bottom: 10px; @include transform(rotate(0deg));
+  }
+  &:hover {
+    span { opacity: 0; }
+    &:before {
+      top: 19px; @include transform(rotate(45deg));
+    }
+    &:after {
+      bottom: 19px; @include transform(rotate(-45deg));
+    }
+  }
+  &[data-menu-expand="true"] {
+    span { opacity: 0; }
+    &:before {
+      top: 19px; @include transform(rotate(45deg));
+    }
+    &:after {
+      bottom: 19px; @include transform(rotate(-45deg));
+    }
+  }
+  &[data-menu-expand="false"] {
+    span { opacity: 1; }
+    &:before {
+      top: 10px; @include transform(rotate(0deg));
+    }
+    &:after {
+      bottom: 10px; @include transform(rotate(0deg));
+    }
+  }
+}
+
+// Menu Mobile
+.cont-menu-mobile {
+  @extend .overlayClass; background-color: rgba($white, 0.85); z-index: -1; overflow-y: auto;
+  .mnuContMob {
+    width: 100%; height: auto; padding: 0; margin: 150px 0 0 0;
+    ul {
+      list-style-type: none; @include displayFlex(flex, column, center, center, no-wrap); margin: 10px auto; padding: 0 0; width: 300px; border-top: 1px solid $col2; border-bottom: 1px solid $col2;
+      li {
+        list-style-type: none; width: 100%; height: auto;
+        a {
+          display: block; color: $c7; text-transform: uppercase; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.0); text-align: center; @include transition(all 0.25s ease); font-weight: 700;
+          &:hover {
+            background-color: rgba(255,255,255,0.10);
+          }
+        }
+        & > .sub-menu {
+          display: none;
+          li {
+            a {
+              color: $white; margin: 0 0 0 0; padding: 0;
+              img {
+                width: 25px; height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .toolsMobile {
+    width: 100%; height: auto; padding: 0; margin: 20px 0 10px 0; text-align: center;
+    a {
+      font-size: rem(14px); text-transform: uppercase; margin: 0 10px 0 0; position: relative;
+      &:last-child {
+        margin: 0 0 0 0;
+      } 
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) {}
+
+@media only screen and (min-width: 480px) {}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  
+  
+}
+
+@media only screen and (min-width: 992px) {
+  .menu-mobile-btn {
+    display: none;
+  }
+  .toolsHead {
+    .conteBtnHead {
+      display: block; text-align: right;
+    }
+  }
+  .menuMain {
+    nav {
+      display: block;
+    }
+  }
+  .toolsHead {
+    ul {
+      @include displayFlex(flex, row, flex-end, center, nowrap);
+    }
+  }
+  .phoneMobile {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1200px) {}

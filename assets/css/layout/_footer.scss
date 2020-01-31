@@ -1,0 +1,143 @@
+/* ==|====================
+   Layout/Footer
+   ======================= */
+
+.g-footer {
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0 60px 0; margin: -1px 0 0 0; z-index: 3; background-color: $c8;
+  hr {
+    border-top: $white solid 4px; width: 70%;
+  }
+}
+.brandFooter {
+  width: 100%; height: auto; padding: 0; margin: 0 0 15px 0; text-align: center;
+  a {
+    display: block;
+    img {
+      display: block; width: 100%; max-width: 160px; height: auto; margin: 0 auto 0 0; padding: 0;
+    }
+    .site-title {
+      font-size: 0; text-indent: -9999px; color: $white; opacity: 0; margin: 0; padding: 0;
+    }
+  }
+}
+.menuGenFooter {
+  width: 100%; height: auto; padding: 0 0 10px 0; margin: 0 0 10px 0;
+  .listGenFoo {
+    width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, flex-start, flex-start, wrap); list-style-type: none;
+    li {
+      list-style-type: none; color: $white; font-size: rem(14px); margin-bottom: 4px;
+      a {
+        text-decoration: none; color: $white; text-decoration: none; @include transition(all 0.23s);
+        &:hover {
+          text-decoration: underline; color: $white;
+        }
+      }
+    }
+  }
+  .socFoo {
+    width: 100%; height: auto; padding: 0; margin: 10px 0 0 0; @include displayFlex(flex, row, center, flex-start, wrap); list-style-type: none;
+    li {
+      list-style-type: none;
+      a {
+        width: 50px; height: 50px; line-height: 50px; text-decoration: none; color: $white; text-decoration: none; background-color: $col10; font-size: rem(26px); margin-bottom: 4px; display: block; text-align: center; @include transition(all 0.23s); border-radius: 50%;
+        &:hover {
+          text-decoration: none; color: $black;
+        }
+      }
+    }
+  }
+}
+.ubicacionFoot {
+  width: 100%; height: auto; padding: 0 0; margin: 0 0 10px 0;
+  h5 {
+    text-transform: uppercase; color: $white; font-size: rem(13px); margin: 0 0 5px 0; padding: 0;
+  }
+  p {
+    font-size: rem(12px); color: $white; margin: 0; padding: 0;
+    a {
+      color: $col3;
+    }
+  }
+}
+.copyFooter {
+  width: 100%; height: auto; padding: 0 0; margin: 0 0 0 0;
+  p {
+    color: $c5; text-align: center; margin: 0 0 0 0; font-size: rem(14px);
+    a {
+      color: $c7; margin-right: 10px;
+      &:hover {
+        color: $col8;
+      }
+      &:first-child {
+        margin-left: 10px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.footerCopyright {
+  width: 100%; height: auto; padding: 16px 0 60px 0; margin: 0; position: relative; z-index: 2; background-color: $white;
+  p {
+    color: $c1; text-align: center; margin: 0 0 0 0; font-size: rem(20px);
+    a {
+      color: $col1; 
+      &:hover {
+        color: $col2;
+      }
+    }
+  }
+}
+.socialMobile {
+  width: 100%; height: auto; @include position(fixed, null null 0 0); padding: 10px 0; margin: 0; z-index: 8; background-color: $col1;
+  .toolsFooterSoc {
+    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; list-style-type: none; @include displayFlex(flex, row, center, center, wrap);
+    li {
+      list-style-type: none; padding: 0 15px; margin: 0;
+      a {
+        color: $white; font-size: rem(20px); @include transition(all 0.23s ease);
+        img {
+          display: block; width: 20px; height: auto;
+        }
+        &:hover {
+          color: $c9;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  .copyFooter {
+    p {
+      font-size: rem(20px);
+    }
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

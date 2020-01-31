@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+// Routes
+$imgR: '../img/';
+$fontR: '../fonts/';
+
+// Fonts
+@include font-face("hlight", "#{$fontR}helvetica/HelveticaNeue-Light", $file-formats: eot svg ttf woff2 woff);
+@include font-face("hmedium", "#{$fontR}helvetica/HelveticaNeue-Medium", $file-formats: eot svg ttf woff2 woff);
+@include font-face("hbold", "#{$fontR}helvetica/HelveticaNeue-Bold", $file-formats: eot svg ttf woff2 woff);
+// @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+// $poppin: 'Poppins', sans-serif;
+$light: 'hlight', sans-serif;
+$medium: 'hmedium', sans-serif;
+$bold: 'hbold', sans-serif;
+
+// = Colors
+// -----------------------------
+
+// Graphic chart
+$gray-1: #333333;
+$gray-2: #191919;
+$gray-3: #0e0e0e;
+$gray-4: #363636;
+$gray-5: #959595;
+$gray-6: #FAF8F7;
+$gray-7: #242424;
+$gray-8: #f1f1f1;
+$gray-9: #eeeeee;
+$gray-10: #f7f8fb;
+$gray-11: #f3f4f8;
+$col1: #cbe346;
+$col2: #DD2526;
+$col3: #C52121;
+$col4: #001351;
+$col5: #0e0e2a;
+$col6: #363636;
+$col7: #b5b8c3;
+$col8: #dad7dc;
+$col9: #566df0;
+$col10: #d70038;
+$col11: #00cd64;
+$col12: #ff9b33;
+$white: #ffffff;
+$black: #000000;
+$facebook: #3b5998;
+$twitter: #43bfe1;
+
+$c1: $gray-1;
+$c2: $gray-2;
+$c3: $gray-3;
+$c4: $gray-4;
+$c5: $gray-5;
+$c6: $gray-6;
+$c7: $gray-7;
+$c8: $gray-8;
+$c9: $gray-9;
+$c10: $gray-10;
+
+// Gradients
+@mixin displayFlex($disp, $direc, $justify, $items, $wrp) {
+  @include display($disp); @include flex-direction($direc); @include justify-content($justify); @include align-items($items); @include flex-wrap($wrp);
+}
+.overlayClass {
+  width: 100%; height: 100%; @include position(fixed, 0 null null 0); margin: 0; padding: 0;
+}
+.overlayClassAbs {
+  width: 100%; height: 100%; @include position(absolute, 0 null null 0); margin: 0; padding: 0;
+}
+.absImg {
+  @include position(absolute, 50% null null 50%); @include transform(translate(-50%, -50%));
+}
+.altoHeroGen {
+  height: 750px;
+}
+
+.fadeX {
+  transition: all 300ms linear 700ms;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+.fadeX.out {
+  opacity: 0; z-index: -1;
+}
+
+// Settings
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .altoHeroGen {
+    height: 700px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+@media only screen and (min-width: 1366px) {
+  .altoHeroGen {
+    height: 100vh;
+  }
+
+}

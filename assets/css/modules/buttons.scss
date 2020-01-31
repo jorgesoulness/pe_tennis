@@ -1,0 +1,100 @@
+/* ==|====================
+   Modules/Buttons
+   ======================= */
+.btnSlideProd {
+  width: 30px; height: 30px; @include position(absolute, 0 null null null); background-color: transparent; line-height: 28px; border: none; outline: 0; display: block; text-align: center; z-index: 10; font-size: rem(24px); padding: 0; margin: 0; cursor: pointer; color: $col3; border: 1px solid $col3; @include border-top-radius(50%); @include border-bottom-radius(50%); @include transition(all 0.23s);
+  &:before, &:after {
+    font-family: 'fontAwesome';
+  }
+  &:hover {
+    color: $col1; border: 1px solid $col3; background-color: $col3;
+  }
+  &.bLeftP {
+    right: calc(50% + 20px); @include transform(translateX(50%));
+    &:before {
+      content: '\f104';
+    }
+  }
+  &.nRightP {
+    right: calc(50% - 20px); @include transform(translateX(50%));
+    &:after {
+      content: '\f105';
+    }
+  }
+}
+.btnsGenericos {
+  width: auto; height: 35px; margin: 0 0 0 0; text-align: center; color: $col3; border: none; @include box-sizing(border-box); line-height: 35px; font-size: rem(14px); cursor: pointer; background-color: $col1; outline: 0;
+  &:hover {
+    box-shadow:0px 10px 10px rgba(0,0,0,0.2); @include transform(translateY(-3px)); color: $col5;
+  }
+  &:link, &:visited {
+    text-decoration: none; text-transform:uppercase; position:relative; top:0; left:0; padding:0 20px; border-radius: 17px; display:inline-block; @include transition(all .5s)
+  }
+  &:active{
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2); @include transform(translateY(-1px));
+  }
+  &:after {
+    content:""; text-decoration: none; text-transform:uppercase; position:absolute; width:100%; height:100%; top:0; left:0; border-radius:100px; display:inline-block; z-index:-1; @include transition(all .5s); background: $col1;
+  }
+  &.ani-btn {
+    @include animation(comeFromBottom 1s ease-out .8);
+    &:hover {
+      &:after {
+        opacity: 0; @include transform(scaleX(1.4) scaleY(1.6));
+      }
+    }
+  }
+}
+@include keyframes(comeFromBottom) {
+  0% {
+    opacity:0; @include transform(translateY(40px));
+  } 
+  100% {
+    opacity:1; @include transform(translateY(0));
+  }
+}
+#button {
+  display: inline-block; background-color: $col1; width: 35px; height: 35px; text-align: center; border-radius: 35px; position: fixed; bottom: 5px; left: 50%; transition: background-color .3s, opacity .5s, visibility .5s; opacity: 0; visibility: hidden; z-index: 1000; @include transform(translateX(-50%));
+  &:after {
+    content: "\f077"; font-family: 'fontAwesome'; font-weight: normal; font-style: normal; font-size: 1em; line-height: 35px; color: #fff;
+  }
+  &:hover {
+    cursor: pointer; background-color: $col2;
+  }
+  &:active {
+    background-color: $col3;
+  }
+  &.show {
+    opacity: 1; visibility: visible;
+  }
+}
+
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

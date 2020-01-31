@@ -1,0 +1,95 @@
+$gw-column: 106.25px;
+$gw-gutter: 15px;
+// Resets
+*, input, :before, :after {
+  @include box-sizing(border-box);
+}
+// Grid System
+.wrapper { // Contenedor General
+  width: 100%; max-width: grid-width(12); margin: 0 auto; @include padding(0 $gw-gutter 0 $gw-gutter); *zoom: 1;
+  &:after {
+    content: ''; display: block; clear: both;
+  }
+}
+.grid-full { // Contenedor de columnas
+  @include display(flex); @include flex-wrap(wrap); @include margin(null -15px null -15px);
+  // Justificar contenido de columnas
+  &.content-start { @include justify-content(flex-start); }
+  &.content-center { @include justify-content(center); }
+  &.content-end { @include justify-content(flex-end); }
+  // Alinear contenido de columnas
+  &.align-start { @include align-items(flex-start); }
+  &.align-center { @include align-items(center); }
+  &.align-end { @include align-items(flex-end); }
+}
+// Clase General de columnas
+[class^="gf-"] { position: relative; @include padding(null $gw-gutter null $gw-gutter); width: 100%; }
+// Columnas Mobile
+.gf-m-1 { @include flex(0 0 8.333333%); max-width: 8.333333%; }
+.gf-m-2 { @include flex(0 0 16.666667%); max-width: 16.666667%; }
+.gf-m-3 { @include flex(0 0 25%); max-width: 25%; }
+.gf-m-4 { @include flex(0 0 33.333333%); max-width: 33.333333%; }
+.gf-m-5 { @include flex(0 0 41.666667%); max-width: 41.666667%; }
+.gf-m-6 { @include flex(0 0 50%); max-width: 50%; }
+.gf-m-7 { @include flex(0 0 58.333333%); max-width: 58.333333%; }
+.gf-m-8 { @include flex(0 0 66.666667%); max-width: 66.666667%; }
+.gf-m-9 { @include flex(0 0 75%); max-width: 75%; }
+.gf-m-10 { @include flex(0 0 83.333333%); max-width: 83.333333%; }
+.gf-m-11 { @include flex(0 0 91.666667%); max-width: 91.666667%; }
+.gf-m-12 { @include flex(0 0 100%); max-width: 100%; }
+
+// Media Query
+@media only screen and (min-width: 360px) {
+  
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  // Columnas Tablet
+  .gf-t-1 { @include flex(0 0 8.333333%); max-width: 8.333333%; }
+  .gf-t-2 { @include flex(0 0 16.666667%); max-width: 16.666667%; }
+  .gf-t-3 { @include flex(0 0 25%); max-width: 25%; }
+  .gf-t-4 { @include flex(0 0 33.333333%); max-width: 33.333333%; }
+  .gf-t-5 { @include flex(0 0 41.666667%); max-width: 41.666667%; }
+  .gf-t-6 { @include flex(0 0 50%); max-width: 50%; }
+  .gf-t-7 { @include flex(0 0 58.333333%); max-width: 58.333333%; }
+  .gf-t-8 { @include flex(0 0 66.666667%); max-width: 66.666667%; }
+  .gf-t-9 { @include flex(0 0 75%); max-width: 75%; }
+  .gf-t-10 { @include flex(0 0 83.333333%); max-width: 83.333333%; }
+  .gf-t-11 { @include flex(0 0 91.666667%); max-width: 91.666667%; }
+  .gf-t-12 { @include flex(0 0 100%); max-width: 100%; }
+
+}
+
+@media only screen and (min-width: 992px) {
+  // Columnas Desktop
+  .gf-d-1 { @include flex(0 0 8.333333%); max-width: 8.333333%; }
+  .gf-d-2 { @include flex(0 0 16.666667%); max-width: 16.666667%; }
+  .gf-d-3 { @include flex(0 0 25%); max-width: 25%; }
+  .gf-d-4 { @include flex(0 0 33.333333%); max-width: 33.333333%; }
+  .gf-d-5 { @include flex(0 0 41.666667%); max-width: 41.666667%; }
+  .gf-d-6 { @include flex(0 0 50%); max-width: 50%; }
+  .gf-d-7 { @include flex(0 0 58.333333%); max-width: 58.333333%; }
+  .gf-d-8 { @include flex(0 0 66.666667%); max-width: 66.666667%; }
+  .gf-d-9 { @include flex(0 0 75%); max-width: 75%; }
+  .gf-d-10 { @include flex(0 0 83.333333%); max-width: 83.333333%; }
+  .gf-d-11 { @include flex(0 0 91.666667%); max-width: 91.666667%; }
+  .gf-d-12 { @include flex(0 0 100%); max-width: 100%; }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+  
+}
+
