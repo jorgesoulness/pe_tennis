@@ -23,215 +23,101 @@ article {
   p { text-align: left; margin: 0 0 0 0; }
 }
 
-// Sections
+// Hero Principal
 .hero-sec {
   width: 100%; height: 450px; @include position(relative, null null null null); padding: 0 0; margin: 0 0 0 0; z-index: 1;
   .contHero {
     width: 100%; height: auto; padding: 0; margin: 0; @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); z-index: 4; display: block;
-    .titleHeroHome {
-      width: 100%; height: auto; padding: 0 0; margin: 0 0 10px 0; display: block;
-    }
     h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 20px 0; padding: 0; text-align: center; color: $c7; font-size: rem(40px); font-weight: 800;
-      span {
-        position: relative;
-        &:after {
-          content: ''; width: 100%; height: 10px; background-color: $col2; @include position(absolute, null null 5px 0); @include border-top-radius(10px); @include border-bottom-radius(10px); z-index: -1;
-        }
-      }
+      margin: 0 0 20px 0; padding: 0; text-align: left; color: $white; font-size: rem(25px); font-family: $light;
+      strong, b { font-family: $medium; color: $col1; }
     }
     p {
-      text-align: center; margin: 0; padding: 0; color: $c4; font-size: rem(20px);
+      text-align: left; margin: 0; padding: 0; color: $c4; font-size: rem(13px);
+    }
+    .btnHero {
+      width: 100%; height: auto; margin: 30px 0 0 0; padding: 0;
+      .btnsGenericos {
+        i {
+          margin-left: 10px;
+        }
+        &:link, &:visited {
+          padding: 0 20px 0 30px;
+        }
+      }
     }
   }
   .header-title {
     width: 100%; height: 100%; @include position(absolute, 0 0 null null); z-index: 2; background-color: $col1; @include transition(all 0.25s);
   }
+  .img-hero {
+    width: 100%; height: 100%; display: block; margin: 0 0; object-fit: cover; font-family: "object-fit: cover"; @include position(absolute, 0 null null 0); z-index: 1;
+  }
   .scrollNext {
-    width: 50px; height: 50px; display: block; margin: 0; padding: 0; @include position(absolute, null null 20px 50%); @include transform(translateX(-50%)); z-index: 6; line-height: 50px; text-align: center; color: $col3; font-size: rem(40px);
+    width: 50px; height: 50px; display: block; margin: 0; padding: 0; @include position(absolute, null null 20px 50%); @include transform(translateX(-50%)); z-index: 6; line-height: 50px; text-align: center; color: $white; font-size: rem(40px);
     &:hover {
-      color: $col1;
+      color: $c11;
     }
   }
   .overlayHero {
     @extend .overlayClassAbs; @include background(linear-gradient(rgba($white, 0.0), rgba($white, 0.50)) top repeat); z-index: 1;
   }
-}
-.toolsHero {
-  width: auto; height: auto; padding: 0; margin: 0; @include position(fixed, 50% 10px null null); @include transform(translateY(-50%)); z-index: 100; display: none;
-  ul {
-    list-style-type: none; @include displayFlex(flex, column, flex-start, flex-start, wrap); padding: 0; margin: 0;
-    li {
-      list-style-type: none; padding: 0 0 0 0; margin: 0 0 20px 0;
-      a {
-        display: block; width: 40px; height: 40px; color: $col1; font-size: rem(20px); margin: 0; padding: 0; text-align: center; line-height: 40px; background-color: transparent; @include border-top-radius(50%); @include border-bottom-radius(50%);
-        &:hover {
-          color: $col1; background-color: $col3;
-        }
-      }
-    }
+  &:before {
+    content: ''; width: 1px; height: 100%; @include position(absolute, 0 null null 70px); background-color: $white; z-index: 2;
   }
-}
-.socialMobileBlock {
-  width: 100%; height: auto; padding: 0; margin: 0; background-color: $col3; border-top: solid 1px $col1; border-bottom: solid 1px $col1; position: relative; display: block;
-  ul {
-    list-style-type: none; @include displayFlex(flex, row, center, center, wrap); padding: 0; margin: 0; width: 100%;
-    li {
-      list-style-type: none; padding: 0 0 0 0; margin: 0 0 0 0; width: auto;
-      a {
-        display: block; width: 50px; height: 40px; color: $col1; font-size: rem(20px); margin: 0; padding: 0; text-align: center; line-height: 40px; background-color: transparent; @include border-top-radius(50%); @include border-bottom-radius(50%);
-        &:hover {
-          color: $col1; background-color: $col3;
-        }
-      }
-    }
-  }
-}
-.contBtnMain {
-  width: 100%; height: auto; padding: 0; margin: 20px 0; position: relative; display: block;
 }
 
 // Secciones Home
 .modulo-one-home {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0 10px 0; margin: 0 0 0 0; background-color: $white; z-index: 2;
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 60px 0 60px 0; margin: 0 0 0 0; background-color: $c11; z-index: 2;
 }
 .modulo-two-home {
   width: 100%; height: auto; @include position(relative, null null null null); padding: 50px 0; margin: 0; background-color: $white; z-index: 2;
 }
 .modulo-three-home {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 60px 0; margin: 0; background-color: $c8; z-index: 2;
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0; margin: 0; background-color: $c8; z-index: 2;
 }
 
-// Secciones
-.ContUnique {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 30px 0; margin: 0; overflow: hidden;
-  .boxUnique {
-    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; @include displayFlex(flex, row, center, center, wrap);
-    .imageUnique {
-      width: 100%; position: relative; padding-bottom: 85%; margin-top: 0; @include box-sizing(border-box);
-      canvas {
-        @include position(absolute, -15px null null -15px); width: 120%; height: 120%; z-index: -1;
-      }
-    }
-    .textUnique {
-      width: 100%; padding-top: 0; padding-left: 15px; padding-right: 0; position: relative; @include box-sizing(border-box);
-      h3 {
-        margin: 0 0 35px 0; position: relative; font-size: rem(22px); display: inline-block; font-weight: 800; color: $c7;
-        span {
-          white-space: nowrap; @include position(absolute, 15px null null 10px); color: $c5; z-index: -1; font-size: rem(30px); font-weight: 900;
-        }
-      }
-      p {
-        font-size: rem(14px); margin-bottom: 25px; text-align: justify;
-      }
-    }
-    .boxUniqueCount {
-      color: rgba($col1, 0.20); @include position(absolute, null null -20px 50%); width: auto; height: auto; font-size: rem(120px); font-weight: 900; z-index: -1; line-height: 1; @include transform(translateX(-50%));
-    }
-    &:nth-child(1) {
-      .boxUniqueCount {
-        left: inherit; right: 50px; @include transform(translateX(0));
-      }
+// Secciones & Modulos
+.descHome {
+  width: 100%; height: auto; padding: 0 0 0 0; margin: 0 0 0 0; @include displayFlex(flex, row, center, flex-start, wrap); position: relative; @include box-sizing(border-box);
+  .titleSite {
+    width: 30%; height: auto; margin: 0 0 0 0; padding: 0 10px; @include box-sizing(border-box);
+    h5 {
+      margin: 20px 0 0 0; padding: 0; color: $col1; text-align: right; text-transform: uppercase; font-size: rem(15px);
     }
   }
-}
-.homepage-studies {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0; margin: 30px 0 0 0; overflow: hidden;
-  .contItemStudies {
-    width: 100%; height: auto; padding: 0; margin: 0 0 40px 0; position: relative; overflow: hidden; @include box-sizing(border-box); @include transition(all 0.25s); z-index: 1;
-    .caseStudy-normal {
-      width: 100%; height: 430px; padding: 0; margin: 0; position: relative; @include displayFlex(flex, column, center, center, wrap); z-index: 1; background-repeat: no-repeat; background-position: center center; background-size: cover;
+  .descBox {
+    width: 70%; height: auto; margin: 0 0 0 0; padding: 0 10px; @include box-sizing(border-box); position: relative;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0 15px 0; font-size: rem(50px); display: block; color: $black; padding: 0; font-family: $light;
     }
-    .caseStudy-hover {
-      width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); opacity: 0; z-index: 5; overflow: hidden; background-color: $white; @include transition(opacity 300ms ease);
-      .descCase {
-        @include animation-play-state(paused);
-      }
-      .imageCan {
-        @include animation-play-state(paused);
-      }
-    }
-    &:hover {
-      .caseStudy-hover {
-        opacity: 1;
-        .descCase {
-          @include animation-play-state(running);
+    p { text-align: left; margin: 0 0 0 0;color: $c7; font-size: rem(18px); }
+    .btnModuloOne {
+      width: auto; height: auto; padding: 0; margin: 0; @include position(absolute, null 0 0 null);
+      .btnsGenericos {
+        height: 40px; color: $c9; border: 1px solid $c9; line-height: 40px;
+        i {
+          margin-left: 10px;
         }
-        .imageCan {
-          @include animation-play-state(running);
+        &:hover {
+          color: $white; background: $c9;
+        }
+        &:link, &:visited {
+          padding: 0 20px 0 30px;
+        }
+        &.ani-btn {
+          &:hover {
+            &:after {
+              background-color: $c9;
+            }
+          }
         }
       }
     }
-  }
-}
-.titileStudy {
-  width: 100%; height: auto; padding: 0; margin: 0;
-  h1, h2, h3, h4, h5, h6 {
-    color: $white; font-size: rem(30px); text-align: center; margin: 0; padding: 0; font-weight: 900;
-  }
-}
-.descCase {
-  width: 100%; height: auto; padding: 30px 20px 0 20px; margin: 0 0 20px 0; position: relative; @include box-sizing(border-box);
-  h1, h2, h3, h4, h5, h6 {
-    color: $c7;
-  }
-  h4 {
-    font-size: rem(25px); position: relative; margin: 0 0 10px 0; padding: 0 0 30px 0; font-weight: 900; text-align: left;
-    &:after {
-      content: ''; width: 30%; height: 15px; @include position(absolute, null null 15px 0); background-color: $col2; border-radius: 15px;
-    }
-  }
-  h5 {
-    margin: 0 0 10px 0; text-align: left; font-size: rem(18px); font-weight: 900;
-  }
-  p {
-    color: $c7; text-align: left; margin: 0 0 5px 0; padding: 0 0 0 20px; white-space: wrap; font-size: rem(14px);
-  }
-}
-.imageCan {
-  width: 100%; height: 510px; padding: 0; margin: 0; position: relative; @include box-sizing(border-box);
-  canvas {
-    @include position(absolute, -140% null null 50%); width: 140%; /* height: 100%; */ height: 180%; z-index: 1; @include transform(translateX(-50%)); @include transition(all 0.5s ease-in-out);
   }
 }
 
-.avisoPrivacidad-cont {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0 30px 0; margin: 0; background-color: $white; @include box-sizing(border-box); z-index: 3; overflow: hidden;
-  h2 {
-    color: $col3; text-align: center; margin-bottom: 25px;
-  }
-  p {
-    text-align: left; font-size: rem(16px); color: $c1;
-    span, b, strong {
-      font-weight: 700;
-    }
-  }
-  a { color: $col1; font-weight: 400; &:hover { color: $col3; } }
-}
-.faQs-cont {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0 30px 0; margin: 0; background-color: $white; @include box-sizing(border-box); z-index: 3; overflow: hidden;
-  h2.title-beneficios {
-    color: $col3; text-align: center; margin-bottom: 25px;
-  }
-  .card { border: none;}
-  .card-header {
-    background-color: $white!important; border: none; border-bottom:solid 2px #312b80; word-wrap: break-word;
-    h2 { word-wrap: break-word; font-size: rem(16px); }
-    .btn-link {
-      width: 100%; height: auto; position: relative; text-align: left; font-size: rem(14px); white-space: normal;
-      i {
-        width: auto; height: auto; @include position(absolute, 50% 10px null null); @include transform(translateY(-50%));
-      }
-      img {
-        width: 30px; height: auto; @include position(absolute, 50% 10px null null); @include transform(translateY(-50%)); display: block; margin: 0; padding: 0;
-      }
-    }
-  }
-  .btn-link, .card-body {
-    color: $c1; text-decoration: none; font-size: rem(13px);
-  }
-  .btn-link:hover, .btn-link:after { text-decoration: none; color: #312b80;}
-}
 
 @media only screen and (min-width: 360px) {
   .descGen {
@@ -243,21 +129,6 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .textUnique {
-        h3 {
-          font-size: rem(25px);
-          span {
-            @include position(absolute, 20px null null -10px); font-size: rem(30px);
-          }
-        }
-        p {
-          font-size: rem(15px);
-        }
-      }
-    }
-  }
 
 }
 
@@ -266,15 +137,7 @@ article {
     height: 400px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(40px);
-        span {
-          &:after {
-            height: 10px; bottom: 15px; @include border-top-radius(10px); @include border-bottom-radius(10px);
-          }
-        }
-      }
-      p {
-        font-size: rem(16px);
+        font-size: rem(38px);
       }
     }
   }
@@ -290,30 +153,6 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .textUnique {
-        padding-left: 35px;
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(35px);
-          span {
-            @include position(absolute, 20px null null -25px); font-size: rem(40px);
-          }
-        }
-        p {
-          font-size: rem(15px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -10px; left: 50%; font-size: rem(100px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
-      }
-    }
-  }
 
 }
 
@@ -322,15 +161,21 @@ article {
     height: 500px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(50px);
-        span {
-          &:after {
-            height: 10px; bottom: 15px; @include border-top-radius(10px); @include border-bottom-radius(10px);
-          }
-        }
+        font-size: rem(40px);
       }
       p {
-        font-size: rem(18px);
+        font-size: rem(14px);
+      }
+      .btnHero {
+        width: 100%; height: auto; margin: 30px 0 0 0; padding: 0;
+        .btnsGenericos {
+          i {
+            margin-left: 10px;
+          }
+          &:link, &:visited {
+            padding: 0 15px 0 20px;
+          }
+        }
       }
     }
   }
@@ -346,66 +191,18 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .imageUnique {
-        width: 40%; padding-bottom: 45%; margin-top: 0;
-      }
-      .textUnique {
-        width: 60%; padding-top: 0; padding-left: 35px;
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(25px);
-          span {
-            @include position(absolute, 10px null null -25px); font-size: rem(35px);
-          }
-        }
-        p {
-          font-size: rem(15px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -10px; left: 50%; font-size: rem(100px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
-      }
-      &:nth-child(even) {
-        .imageUnique {
-          @include order(2);
-        }
-        .textUnique {
-          @include order(1);
-        }
-      }
-    }
-  }
-  .titileStudy {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: rem(50px);
-    }
-  }
 
 }
 
 @media only screen and (min-width: 768px) {
-  .modulo-one-home {
-    padding: 0 0 20px 0;
-  }
   .hero-sec {
     height: 550px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(60px);
-        span {
-          &:after {
-            height: 20px; bottom: 15px; @include border-top-radius(20px); @include border-bottom-radius(20px);
-          }
-        }
+        font-size: rem(45px);
       }
       p {
-        font-size: rem(20px);
+        font-size: rem(15px);
       }
     }
   }
@@ -421,96 +218,18 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .imageUnique {
-        width: 50%; padding-bottom: 45%; margin-top: 0;
-      }
-      .textUnique {
-        width: 50%; padding-top: 0; padding-left: 35px;
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(25px);
-          span {
-            @include position(absolute, 10px null null -25px); font-size: rem(35px);
-          }
-        }
-        p {
-          font-size: rem(15px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -20px; left: 50%; font-size: rem(120px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
-      }
-    }
-  }
-  .descCase {
-    h4 {
-      font-size: rem(40px);
-      &:after {
-        width: 30%; height: 15px; bottom: 15px; border-radius: 15px;
-      }
-    }
-    h5 {
-      font-size: rem(25px);
-    }
-    p {
-      font-size: rem(16px);
-    }
-  }
-  .homepage-studies {
-    .contItemStudies {
-      .caseStudy-normal {
-        height: 510px;
-      }
-    }
-  }
-  .imageCan {
-    height: 510px;
-  }
-  .titileStudy {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: rem(60px);
-    }
-  }
-  .descCase {
-    h4 {
-      font-size: rem(22px);
-      &:after {
-        width: 30%; height: 15px; bottom: 15px; border-radius: 15px;
-      }
-    }
-    h5 {
-      font-size: rem(20px);
-    }
-    p {
-      font-size: rem(14px);
-    }
-  }
 
 }
 
 @media only screen and (min-width: 992px) {
-  .modulo-one-home {
-    padding: 0 0 80px 0;
-  }
   .hero-sec {
     height: 600px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(75px);
-        span {
-          &:after {
-            height: 20px; bottom: 15px; @include border-top-radius(20px); @include border-bottom-radius(20px);
-          }
-        }
+        font-size: rem(48px);
       }
       p {
-        font-size: rem(20px);
+        font-size: rem(16px);
       }
     }
   }
@@ -526,108 +245,15 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .imageUnique {
-        padding-bottom: 45%; margin-top: 0;
-      }
-      .textUnique {
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(30px);
-          span {
-            @include position(absolute, 12px null null -25px); font-size: rem(40px);
-          }
-        }
-        p {
-          font-size: rem(16px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -20px; left: 50%; font-size: rem(120px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
-      }
-    }
-  }
-  .homepage-studies {
-    .contItemStudies {
-      .caseStudy-normal {
-        height: 610px;
-      }
-    }
-  }
-  .imageCan {
-    height: 610px;
-  }
-  .titileStudy {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: rem(75px);
-    }
-  }
-  .descCase {
-    h4 {
-      font-size: rem(25px);
-      &:after {
-        width: 30%; height: 15px; bottom: 15px; border-radius: 15px;
-      }
-    }
-    h5 {
-      font-size: rem(22px);
-    }
-    p {
-      font-size: rem(15px);
-    }
-  }
 
 }
 
 @media only screen and (min-width: 1024px) {
-  .modulo-one-home {
-    padding: 0 0 100px 0;
-  }
   .hero-sec {
-    height: 650px;
+    height: 645px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(80px);
-        span {
-          &:after {
-            height: 20px; bottom: 15px; @include border-top-radius(20px); @include border-bottom-radius(20px);
-          }
-        }
-      }
-      p {
-        font-size: rem(25px);
-      }
-    }
-  }
-  .ContUnique {
-    .boxUnique {
-      .imageUnique {
-        width: 45%; padding-bottom: 45%; margin-top: 0;
-      }
-      .textUnique {
-        width: 55%; padding-top: 0; padding-left: 60px;
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(40px);
-          span {
-            @include position(absolute, 20px null null -30px); font-size: rem(40px);
-          }
-        }
-        p {
-          font-size: rem(18px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -20px; left: 50%; font-size: rem(120px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
+        font-size: rem(50px);
       }
     }
   }
@@ -639,15 +265,7 @@ article {
     height: 700px;
     .contHero {
       h1, h2, h3, h4, h5, h6 {
-        font-size: rem(90px);
-        span {
-          &:after {
-            height: 20px; bottom: 15px; @include border-top-radius(20px); @include border-bottom-radius(20px);
-          }
-        }
-      }
-      p {
-        font-size: rem(30px);
+        font-size: rem(53px);
       }
     }
   }
@@ -663,86 +281,14 @@ article {
       }
     }
   }
-  .ContUnique {
-    .boxUnique {
-      .imageUnique {
-        width: 45%; padding-bottom: 45%; margin-top: 0;
-      }
-      .textUnique {
-        width: 55%; padding-top: 0; padding-left: 60px;
-        h3 {
-          margin: 0 0 35px 0; font-size: rem(50px);
-          span {
-            font-size: rem(60px);
-          }
-        }
-        p {
-          font-size: rem(18px); margin-bottom: 25px;
-        }
-      }
-      .boxUniqueCount {
-        bottom: -20px; left: 50%; font-size: rem(120px); @include transform(translateX(-50%));
-      }
-      &:nth-child(1) {
-        .boxUniqueCount {
-          right: 50px; left: inherit;
-        }
-      }
-    }
-  }
-  .homepage-studies {
-    .contItemStudies {
-      .caseStudy-normal {
-        height: 700px;
-      }
-    }
-  }
-  .titileStudy {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: rem(80px);
-    }
-  }
-  .descCase {
-    h4 {
-      font-size: rem(40px);
-      &:after {
-        width: 30%; height: 15px; bottom: 15px; border-radius: 15px;
-      }
-    }
-    h5 {
-      font-size: rem(25px);
-    }
-    p {
-      font-size: rem(16px);
-    }
-  }
-  .imageCan {
-    height: 700px;
-    canvas {
-      top: -45%; width: 180%; /* height: 100%; */ height: 200%;
-    }
-  }
 
 }
 @media only screen and (min-width: 1366px) {
-  .homepage-studies {
-    .contItemStudies {
-      .caseStudy-normal {
-        height: 780px;
-      }
-    }
-  }
-  .imageCan {
-    height: 768px;
-    canvas {
-      top: -50%;
-    }
-  }
-
-
-}
-@media only screen and (min-width: 1400px) {
   .hero-sec {
-    height: 100vh;
+    height: 791px;
   }
+}
+
+@media only screen and (min-width: 1400px) {
+
 }

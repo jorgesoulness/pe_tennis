@@ -3,7 +3,7 @@
    ======================= */
 
 .g-footer {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0 60px 0; margin: -1px 0 0 0; z-index: 3; background-color: $c8;
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0 40px 0; margin: 0 0 0 0; z-index: 3; background-color: $col1;
   hr {
     border-top: $white solid 4px; width: 70%;
   }
@@ -11,9 +11,9 @@
 .brandFooter {
   width: 100%; height: auto; padding: 0; margin: 0 0 15px 0; text-align: center;
   a {
-    display: block;
+    display: block; width: 55px; height: 55px; margin: 0 auto 0 auto; padding: 0 0;
     img {
-      display: block; width: 100%; max-width: 160px; height: auto; margin: 0 auto 0 0; padding: 0;
+      display: block; width: 100%; height: auto; margin: 0 0 0 0; padding: 0; object-fit: contain; font-family: "object-fit: contain";
     }
     .site-title {
       font-size: 0; text-indent: -9999px; color: $white; opacity: 0; margin: 0; padding: 0;
@@ -21,63 +21,52 @@
   }
 }
 .menuGenFooter {
-  width: 100%; height: auto; padding: 0 0 10px 0; margin: 0 0 10px 0;
+  width: 100%; height: auto; padding: 0 0 0 0; margin: 0 0 20px 0;
   .listGenFoo {
-    width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, flex-start, flex-start, wrap); list-style-type: none;
+    width: 100%; height: auto; padding: 0; margin: 0 0 13px 0; @include displayFlex(flex, column, center, center, wrap); list-style-type: none;
     li {
-      list-style-type: none; color: $white; font-size: rem(14px); margin-bottom: 4px;
+      list-style-type: none; margin-right: 0; margin-bottom: 8px;
       a {
-        text-decoration: none; color: $white; text-decoration: none; @include transition(all 0.23s);
+        text-decoration: none; color: $col2; text-decoration: none; @include transition(all 0.23s); color: $col2; font-size: rem(13px); margin-bottom: 4px; letter-spacing: 1.14px; font-family: $bold;
         &:hover {
-          text-decoration: underline; color: $white;
+          color: $c3;
         }
       }
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
   .socFoo {
-    width: 100%; height: auto; padding: 0; margin: 10px 0 0 0; @include displayFlex(flex, row, center, flex-start, wrap); list-style-type: none;
+    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; @include displayFlex(flex, row, center, center, wrap); list-style-type: none;
     li {
       list-style-type: none;
       a {
-        width: 50px; height: 50px; line-height: 50px; text-decoration: none; color: $white; text-decoration: none; background-color: $col10; font-size: rem(26px); margin-bottom: 4px; display: block; text-align: center; @include transition(all 0.23s); border-radius: 50%;
+        display: block; width: 31px; height: 31px; font-size: rem(15px); @include transition(all 0.23s ease); background-color: transparent; @include border-top-radius(50%); @include border-bottom-radius(50%); line-height: 31px; text-align: center; position: relative; overflow: hidden; margin: 0 12px 0 0; -webkit-box-shadow: 0 0 0 1px $white;box-shadow: 0 0 0 1px $white;
+        &:before, &:after {
+          font-family: 'fontAwesome'; @include position(absolute, 0 null null 0); width: 100%; height: 100%; color: $white; @include transition(transform 300ms ease-in-out, all 0.25s);
+        }
+        &:before { @include transform(translateY(-100%)); }
+        &:after { @include transform(translateY(0)); }
+        //Clases
+        &.tni-whatsapp { &:before, &:after { content: '\f232'; } }
+        &.tni-facebook { &:before, &:after { content: '\f09a'; } }
+        &.tni-twitter { &:before, &:after { content: '\f099'; } }
+        &.tni-instagram { &:before, &:after { content: '\f16d'; } }
+        &.tni-youtube { &:before, &:after { content: '\f16a'; } }
+        &.tni-vimeo { &:before, &:after { content: '\f27d'; } }
+        &.tni-linkedin { &:before, &:after { content: '\f0e1'; } }
+        //Fin-Clases
         &:hover {
-          text-decoration: none; color: $black;
+          background-color: $white;
+          &:before, &:after { color: $col1; }
+          &:before { @include transform(translateY(0)); }
+          &:after { @include transform(translateY(100%)); }
         }
       }
     }
   }
 }
-.ubicacionFoot {
-  width: 100%; height: auto; padding: 0 0; margin: 0 0 10px 0;
-  h5 {
-    text-transform: uppercase; color: $white; font-size: rem(13px); margin: 0 0 5px 0; padding: 0;
-  }
-  p {
-    font-size: rem(12px); color: $white; margin: 0; padding: 0;
-    a {
-      color: $col3;
-    }
-  }
-}
-.copyFooter {
-  width: 100%; height: auto; padding: 0 0; margin: 0 0 0 0;
-  p {
-    color: $c5; text-align: center; margin: 0 0 0 0; font-size: rem(14px);
-    a {
-      color: $c7; margin-right: 10px;
-      &:hover {
-        color: $col8;
-      }
-      &:first-child {
-        margin-left: 10px;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
 .footerCopyright {
   width: 100%; height: auto; padding: 16px 0 60px 0; margin: 0; position: relative; z-index: 2; background-color: $white;
   p {
@@ -86,24 +75,6 @@
       color: $col1; 
       &:hover {
         color: $col2;
-      }
-    }
-  }
-}
-.socialMobile {
-  width: 100%; height: auto; @include position(fixed, null null 0 0); padding: 10px 0; margin: 0; z-index: 8; background-color: $col1;
-  .toolsFooterSoc {
-    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; list-style-type: none; @include displayFlex(flex, row, center, center, wrap);
-    li {
-      list-style-type: none; padding: 0 15px; margin: 0;
-      a {
-        color: $white; font-size: rem(20px); @include transition(all 0.23s ease);
-        img {
-          display: block; width: 20px; height: auto;
-        }
-        &:hover {
-          color: $c9;
-        }
       }
     }
   }
@@ -122,9 +93,27 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .copyFooter {
-    p {
-      font-size: rem(20px);
+  .brandFooter {
+    margin: 0 0 15px 0;
+    a {
+      width: 55px; height: 55px; margin: 0 0 0 auto;
+    }
+  }
+  .menuGenFooter {
+    .listGenFoo {
+      margin: 0 0 13px 0; @include displayFlex(flex, row, flex-start, center, wrap);
+      li {
+        margin-bottom: 4px; margin-right: 20px; margin-bottom: 0;
+        a {
+          @include transition(all 0.23s); font-size: rem(13px); letter-spacing: 1.14px; font-family: $bold;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .socFoo {
+      margin: 0 0 0 0; @include displayFlex(flex, row, flex-start, center, wrap);
     }
   }
 

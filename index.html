@@ -41,7 +41,7 @@
         <header id="headerGeneral" class="g-header">
           <div class="wrapper">
             <div class="grid-full align-center">
-              <div class="gf-d-2">
+              <div class="gf-m-6 gf-d-1">
                 <div class="brand">
                   <a href="">
                     <img src="assets/img/logos/logo_tennis.svg" alt="Tennis">
@@ -49,22 +49,27 @@
                   </a>
                 </div><!--end.brandContent-->
               </div><!-- end.gf-* -->
-              <div class="gf-d-9">
+              <div class="gf-d-10 none-gf-d">
                 <div class="menuMain">
                   <nav class="menuDesk">
                     <ul id="md">
-                      <li><a href="#unicos">Únicos</a></li>
-                      <li><a href="#estudio">Estudio</a></li>
-                      <li><a href="#contacto">Contacto</a></li>
+                      <li class="current"><a href="">Inicio</a></li>
+                      <li><a href="">Acerca de nosotros</a></li>
+                      <li><a href="">Historia</a></li>
+                      <li><a href="">Contacto</a></li>
                     </ul>
                   </nav>
                 </div><!-- end.menuPrincipal -->
               </div><!-- end.gf-* -->
-              <div class="gf-d-1">
+              <div class="gf-m-6 gf-d-1">
                 <div class="toolsHead">
                   <button type="button" id="openMenuMobile" class="menu-mobile-btn" onClick="menuMobile()" data-menu-expand="false">
                     <span></span>
                   </button>
+                  <ul>
+                    <li class="current-lang"><a href="">ES</a></li>
+                    <li><a href="">EN</a></li>
+                  </ul>
                 </div><!-- end.toolsHead -->
               </div><!-- end.gf-* -->
             </div><!-- end.grid-full -->
@@ -81,102 +86,131 @@
 
         <main>
           <div id="primary" class="content-area">
-
             <article class="bg-gen">
+
               <section class="hero-sec">
                 <div class="contHero">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-12">
+                  <div class="wrapper">
+                    <div class="grid-full content-center">
+                      <div class="gf-t-9 gf-d-10">
                         <div class="infohero">
                           <div class="titleHeroHome wow fadeInUp" data-wow-delay="0.40s" data-wow-duration="0.80s">
-                            <h2>Así de simple,<br>nosotros nos<br>en<span>carga</span>mos.</h2>
-                            <p>Logística internacional en tiempo y forma.</p>
+                            <h2>Las mejores raquetas para<br>jugar <strong>Tenis</strong></h2>
+                            <div class="btnHero">
+                              <a class="btnsGenericos ani-btn" href="">Acerca de nosotros <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
                           </div><!-- end.TitleHeroHome -->
                         </div><!-- end.infoHero -->
+                      </div><!-- end.gf* -->
+                    </div><!-- end.grid-full -->
+                  </div><!-- end.wrappe -->
+                </div><!-- end.HeroSec -->
+                <img class="img-hero" src="assets/img/bgs/group.jpg" alt=""><!-- end-imgBG -->
+                <a href="#next" class="scrollNext"><i class="fa fa-angle-down"></i></a><!-- end.btnNavegacion -->
+                <div class="header-title" style="opacity: 0.0"></div><!-- end.overlayFX -->
+              </section><!-- end.heroSection -->
+
+              <section id="next" class="modulo-one-home">
+                <div class="wrapper">
+                  <div class="grid-full content-center">
+                    <div class="gf-t-8 gf-d-10">
+                      <div class="descHome">
+                        <div class="titleSite">
+                          <h5>Tennis</h5>
+                        </div>
+                        <div class="descBox">
+                          <h2>Raquetas.Accesorios.<br>Pelotas.</h2>
+                          <p>Conoce nuestras raquetas y aprende a jugar<br>Tennis como un profesional.</p>
+                          <div class="btnModuloOne">
+                            <a class="btnsGenericos ani-btn" href="">Historia <i class="fa fa-long-arrow-right"></i></a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div><!-- endHeroSec -->
-                <video id="videoHome" autoplay loop muted poster="assets/img/bgs/bg_video.png">
-                  <source src="assets/img/imgPrueba/recorte_puerto.mp4" type="video/mp4">
-                </video>
-                <a href="#entrenamiento" class="scrollNext"><i class="fa fa-angle-down"></i></a>
-                <div class="header-title" style="opacity: 0.0"></div>
-                <div class="overlayHero"></div>
-              </section>
+                    </div><!-- end.gf* -->
+                  </div><!-- end.grid-full -->
+                </div><!-- end.wrapper -->
+              </section><!-- end.sectionOneHome -->
 
-              <section id="unicos" class="modulo-one-home">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="descGen">
-                        <h2>
-                          <strong class="wow slideInLeft" data-wow-delay="0.30s" data-wow-duration="0.40s">que es lo que nos hace</strong>
-                          <span class="wow slideInRight" data-wow-delay="0.30s" data-wow-duration="0.40s">únicos</span>
-                        </h2><!-- end.titleSection -->
-                      </div>
-                    </div><!-- end.colLg -->
-                    <div class="col-12">
-                      <div class="ContUnique">
+              <section class="modulo-two-home">
+                <div class="wrapper no-padding">
+                  <div class="grid-full">
+                    <div class="gf-d-12">
+                      <div class="contSlideRaquetas">
+                        <div class="boximgRaqueta">
+                          <figure>
+                            <img src="assets/img/imgPrueba/ball-color-court-1405355.png" alt="">
+                            <figcapion>
+                              <h2>Nuestras<br><strong>Raquetas</strong></h2>
+                              <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>
+                              <div class="controlsSlide">
 
-                        <div class="boxUnique">
-                          <div class="imageUnique">
-                          </div>
-                          <div class="textUnique">
-                            <h3 class="wow slideInRight" data-wow-delay="0.30s" data-wow-duration="0.60s">La confianza <span class="wow fadeInLeft" data-wow-delay="0.50s" data-wow-duration="0.60s">lo es todo</span></h3>
-                            <p>Tenemos experiencia, somos honestos, somo leales, no especulamos, no inflamos tus cuentas. Podemos ayudarte a eficientar tus operaciones en comercio exterior, menos tiempo, menos gastos, menos dolores de cabeza.</p>
-                            <div class="boxUniqueCount">1</div>
-                          </div>
-                        </div><!-- end.boxUnique -->
-                        <div class="boxUnique">
-                          <div class="imageUnique">
-                          </div>
-                          <div class="textUnique">
-                            <h3 class="wow slideInRight" data-wow-delay="0.30s" data-wow-duration="0.60s">El tiempo <span class="wow fadeInLeft" data-wow-delay="0.50s" data-wow-duration="0.60s">no espera a nadie</span></h3>
-                            <p>Servicio 24/7, Si dormimos obviamente, pero cuando se trata de atenderte tenemos nuestro timbre a todo volumne. Cada embarque que envíe o resiva es importante y nuestra misión es asegurarnos de que su producto se entregue de manera segura y a tiempo.</p>
-                            <div class="boxUniqueCount">2</div>
-                          </div>
-                        </div><!-- end.boxUnique -->
-                        <div class="boxUnique">
-                          <div class="imageUnique">
-                          </div>
-                          <div class="textUnique">
-                            <h3 class="wow slideInRight" data-wow-delay="0.30s" data-wow-duration="0.60s">Listos para despachar <span class="wow fadeInLeft" data-wow-delay="0.50s" data-wow-duration="0.60s">tu mercancía</span></h3>
-                            <p>¿Te imagínas poder despachar un contenedor en menos de 12 hrs? Sabemos que el tiempo vale oro, es por eso por lo que con trabajo en equipo specializado lograremos aprovechar el tiempo al máximo.</p>
-                            <div class="boxUniqueCount">3</div>
-                          </div>
-                        </div><!-- end.boxUnique -->
+                              </div><!-- end.controlsSlider -->
+                            </figcapion>
+                          </figure><!-- end.figure -->
+                        </div><!-- end.boximgRaqueta -->
+                        <div class="boxSlides">
+                          <div class="sliderRaquetas">
 
-                      </div><!-- end.contentUnique -->
-                    </div><!-- end.collg12 -->
-                  </div>
-                </div>
-              </section>
-              
-            </article><!-- end.article inicio --> 
+                            <div>
+                              <figure class="slideRaqueta">
+                                <img src="assets/img/imgPrueba/group-10.png" alt="">
+                              </figure>
+                            </div>
 
-          </div>
+                          </div><!-- end.sliderRaquetas -->
+                        </div><!-- end.boxSlides -->
+                      </div><!-- end.contSlideRaquetas -->
+                    </div><!-- end.gf* -->
+                  </div><!-- end.grid-full -->
+                </div><!-- end.wrapper -->
+              </section><!-- end.sectionOneHome -->
+
+              <section class="modulo-three-home">
+                <div class="wrapper no-padding">
+                  <div class="grid-full">
+                    <div class="gf-m-12">
+                      <figure class="full-img">
+                        <img src="assets/img/imgPrueba/action-athlete-ball-342361.jpg" alt="Action Tennis">
+                      </figure><!-- end.figure -->
+                    </div><!-- end.gf* -->
+                  </div><!-- end.grid-full -->
+                </div><!-- end.wrapper -->
+              </section><!-- end.sectionOneHome -->
+
+            </article><!-- end.article-inicio -->
+          </div><!-- end.contentArea -->
         </main><!-- end.Main -->
 
         <footer class="g-footer">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-12">
+          <div class="wrapper">
+            <div class="grid-full align-center">
+              <div class="gf-t-8 gf-d-9">
                 <div class="menuGenFooter">
+                  <ul class="listGenFoo">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Acerca de nosotros</a></li>
+                    <li><a href="">Historia</a></li>
+                    <li><a href="">Contacto</a></li>
+                  </ul><!-- end.listGenerico -->
                   <ul class="socFoo">
-                    <li><a href="" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="copyFooter">
-                  <p>&reg; 2020 Tennis | Todos los Derechos Reservados.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+                    <li><a class="tni-linkedin" href="" target="_blank"></a></li>
+                    <li><a class="tni-vimeo" href="" target="_blank"></a></li>
+                    <li><a class="tni-instagram" href="" target="_blank"></a></li>
+                    <li><a class="tni-twitter" href="" target="_blank"></a></li>
+                    <li><a class="tni-facebook" href="" target="_blank"></a></li>
+                  </ul><!-- end.listSocial -->
+                </div><!-- end.menuGenFooter -->
+              </div><!-- end.gf* -->
+              <div class="gf-t-4 gf-d-3">
+                <div class="brandFooter">
+                  <a href="">
+                    <img src="assets/img/logos/logo_tennis_footer.svg" alt="Tennis">
+                    <h3 class="site-title">Tennis</h3>
+                  </a><!-- end.contBrandImg -->
+                </div><!-- end.brandFooter -->
+              </div><!-- end.gf* -->
+            </div><!-- end.grid-full -->
+          </div><!-- end.wrapper -->
         </footer><!-- end.Footer -->
 
         <!-- Back to top button -->

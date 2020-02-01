@@ -5,12 +5,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: $white; font-family: $medium; color: $black; overflow-x: hidden; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
+  background-color: $white; font-family: $medium; color: $black; overflow-x: hidden; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; padding: 0; margin: 0;
 }
 *:focus { outline:none !important; }
 
 a {
-  color: $col2;
+  color: $col2; text-decoration: none;
   &:hover {
     @include transition(all 0.25s); text-decoration: none; color: $c7;
   }
@@ -24,13 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 // Utilidades
 .wow {
   visibility: hidden; @include transform-origin(0 50%);
-}
-
-.btnLets {
-  width: auto; height: 50px; background-color: $col2; color: $white; padding: 0 30px; margin: 0 0 0 0; -webkit-border-radius: 25px; border-radius: 25px; line-height: 50px; font-weight: 700; display: block; text-transform: uppercase; border: none; font-size: rem(16px); @include position(fixed, null 50px 20px null); @include transition(all 300ms ease-in-out); z-index: 200;
-  &:hover {
-    background-color: $col3; -webkit-border-radius: 10px; border-radius: 10px; color: $white;
-  }
 }
 
 .overlayGenerico {

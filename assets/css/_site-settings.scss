@@ -9,9 +9,9 @@ $imgR: '../img/';
 $fontR: '../fonts/';
 
 // Fonts
-@include font-face("hlight", "#{$fontR}helvetica/HelveticaNeue-Light", $file-formats: eot svg ttf woff2 woff);
-@include font-face("hmedium", "#{$fontR}helvetica/HelveticaNeue-Medium", $file-formats: eot svg ttf woff2 woff);
-@include font-face("hbold", "#{$fontR}helvetica/HelveticaNeue-Bold", $file-formats: eot svg ttf woff2 woff);
+@include font-face("hlight", "#{$fontR}helvetica/light/HelveticaNeue-Light", $file-formats: eot svg ttf woff2 woff);
+@include font-face("hmedium", "#{$fontR}helvetica/medium/HelveticaNeue-Medium", $file-formats: eot svg ttf woff2 woff);
+@include font-face("hbold", "#{$fontR}helvetica/bold/HelveticaNeue-Bold", $file-formats: eot svg ttf woff2 woff);
 // @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 // $poppin: 'Poppins', sans-serif;
 $light: 'hlight', sans-serif;
@@ -28,13 +28,13 @@ $gray-3: #0e0e0e;
 $gray-4: #363636;
 $gray-5: #959595;
 $gray-6: #FAF8F7;
-$gray-7: #242424;
+$gray-7: #787878;
 $gray-8: #f1f1f1;
-$gray-9: #eeeeee;
+$gray-9: #282e47;
 $gray-10: #f7f8fb;
 $gray-11: #f3f4f8;
 $col1: #cbe346;
-$col2: #DD2526;
+$col2: #2b3049;
 $col3: #C52121;
 $col4: #001351;
 $col5: #0e0e2a;
@@ -60,6 +60,7 @@ $c7: $gray-7;
 $c8: $gray-8;
 $c9: $gray-9;
 $c10: $gray-10;
+$c11: $gray-11;
 
 // Gradients
 @mixin displayFlex($disp, $direc, $justify, $items, $wrp) {

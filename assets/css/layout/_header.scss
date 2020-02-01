@@ -2,38 +2,27 @@
    Layout/Header
    ======================= */
 
+// Header Principal Sticky
 .g-header {
-  width: 100%; height: auto; @include position(fixed, 0 null null 0); padding: 10px 0; margin: 0; background-color: transparent; z-index: 100; border-bottom: none; @include transition(transform 200ms ease, all 0.25s); box-shadow: 0 0 0 rgba($black, 0.0);
+  width: 100%; height: auto; @include position(fixed, 0 null null 0); padding: 15px 0; margin: 0; background-color: transparent; z-index: 100; border-bottom: none; @include transition(transform 200ms ease, all 0.25s); box-shadow: 0 0 0 rgba($black, 0.0);
   &.activeHead {
-    background-color: rgba($white, 0.95); box-shadow: 0 4px 10px rgba($black, 0.10);
+    background-color: rgba($col1, 0.95); box-shadow: 0 4px 10px rgba($black, 0.10);
   }
 }
-
+// Logo Principal Estilos
 .brand {
   width: 100%; height: auto; padding: 0; margin: 0;
   a {
-    display: block;
+    display: block; width: auto; height: auto;
     img {
-      display: block; width: 100%; max-width: 200px; height: auto; margin: 0 auto 0 0; padding: 0;
+      display: block; width: 100%; max-width: 37px; height: auto; margin: 0 auto 0 0; padding: 0;
     }
     .site-title {
       font-size: 0; text-indent: -9999px; color: $white; opacity: 0; margin: 0; padding: 0;
     }
   }
 }
-.brandMain {
-  width: 100%; height: auto; padding: 0; margin: 0 0 20px 0;
-  img {
-    display: block; width: 100%; max-width: 200px; height: auto; margin: 0 auto 0 auto; padding: 0;
-  }
-}
-.phoneMobile {
-  margin: 0 0 0 0; padding: 0 0 0 0; text-align: right; display: block;
-  a {
-    color: $white; font-size: rem(16px);
-  }
-}
-
+// ToolsHead Estilos
 .toolsHead {
   width: 100%; height: auto; padding: 0; margin: 0 0 0 0;
   ul {
@@ -41,12 +30,14 @@
     li {
       list-style-type: none; padding: 5px 10px; margin: 0;
       a {
-        color: $white; font-size: rem(20px); @include transition(all 0.23s ease);
-        img {
-          display: block; width: 20px; height: auto;
-        }
+        color: rgba($white, 0.70); font-size: rem(13px); @include transition(all 0.23s ease);
         &:hover {
-          color: $c9;
+          color: $white;
+        }
+      }
+      &.current-lang {
+        a {
+          color: $white;
         }
       }
     }
@@ -55,41 +46,49 @@
     display: none; text-align: right;
   }
 }
-
+// Menu Principal Estilos (Desktop)
 .menuMain {
   width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative;
   nav {
     width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative; display: none;
     ul {
-      width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative; list-style-type: none; @include displayFlex(flex, row, flex-end, center, wrap);
+      width: 100%; height: auto; padding: 0; margin: 0 0 0 0; position: relative; list-style-type: none; @include displayFlex(flex, row, flex-start, center, wrap);
       li {
-        list-style-type: none; padding: 0 0 0 0; margin: 0 30px 0 0; position: relative;
+        list-style-type: none; padding: 0 0 0 0; margin: 0 40px 0 0; position: relative;
         a {
-          color: $c7; margin: 0 0 0 0; padding: 0; font-size: rem(20px); font-weight: 500; text-transform: lowercase;
+          color: $white; margin: 0 0 0 0; padding: 0; font-size: rem(16px); letter-spacing: 1.14px;
         }
         &:last-child {
           margin: 0 0 0 0;
         }
         &:after {
-          content: ''; width: 0; height: 3px; padding: 0 0; margin: 0 0 0 0; background-color: $col2; @include position(absolute, null null -4px 0); @include transition(all 0.25s ease);
+          content: ''; width: 0; height: 3px; padding: 0 0; margin: 0 0 0 0; background-color: $white; @include position(absolute, null null -10px 0); @include transition(all 0.25s ease);
         }
         &:hover {
           &:after {
-            width: 100%;
+            width: 10px;
+          }
+        }
+        &.current {
+          a {
+            font-family: $bold;
+          }
+          &:after {
+            width: 10px;
           }
         }
       }
     }
   }
 }
-
+// Botón Menu Mobile(Open)
 .menu-mobile-btn {
   width: 40px; height: 40px; display: block; margin: 0 0 0 auto; padding: 0; position: relative; border: none; @include box-sizing(border-box); background-color: transparent; cursor: pointer;
   span {
-    width: 15px; height: 2px; @include position(absolute, 50% 8px null null); background-color: $col2; @include transform(translateY(-50%)); opacity: 1; @include transition(opacity 0.18s ease-in-out);
+    width: 15px; height: 2px; @include position(absolute, 50% 8px null null); background-color: $white; @include transform(translateY(-50%)); opacity: 1; @include transition(opacity 0.18s ease-in-out);
   }
   &:before, &:after {
-    content: ''; width: 25px; height: 2px; @include position(absolute, null null null 7px); background-color: $col2; @include transition(transform 0.25s ease);
+    content: ''; width: 25px; height: 2px; @include position(absolute, null null null 7px); background-color: $white; @include transition(transform 0.25s ease);
   }
   &:before {
     top: 10px; @include transform(rotate(0deg));
@@ -125,18 +124,17 @@
     }
   }
 }
-
 // Menu Mobile
 .cont-menu-mobile {
-  @extend .overlayClass; background-color: rgba($white, 0.85); z-index: -1; overflow-y: auto;
+  @extend .overlayClass; background-color: rgba($col1, 0.95); z-index: -1; overflow-y: auto;
   .mnuContMob {
-    width: 100%; height: auto; padding: 0; margin: 150px 0 0 0;
+    width: 100%; height: auto; padding: 0; margin: 100px 0 0 0;
     ul {
-      list-style-type: none; @include displayFlex(flex, column, center, center, no-wrap); margin: 10px auto; padding: 0 0; width: 300px; border-top: 1px solid $col2; border-bottom: 1px solid $col2;
+      list-style-type: none; @include displayFlex(flex, column, center, center, no-wrap); margin: 10px auto; padding: 0 0; width: 300px; border-top: 1px solid $white; border-bottom: 1px solid $white;
       li {
         list-style-type: none; width: 100%; height: auto;
         a {
-          display: block; color: $c7; text-transform: uppercase; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.0); text-align: center; @include transition(all 0.25s ease); font-weight: 700;
+          display: block; color: $white; text-transform: uppercase; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.0); text-align: center; @include transition(all 0.25s ease); font-weight: 700;
           &:hover {
             background-color: rgba(255,255,255,0.10);
           }
