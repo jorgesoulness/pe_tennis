@@ -80,21 +80,21 @@ article {
 
 // Secciones & Modulos
 .descHome {
-  width: 100%; height: auto; padding: 0 0 0 0; margin: 0 0 0 0; @include displayFlex(flex, row, center, flex-start, wrap); position: relative; @include box-sizing(border-box);
+  width: 100%; height: auto; padding: 0 0 0 0; margin: 0 0 0 0; @include displayFlex(flex, column, center, flex-start, wrap); position: relative; @include box-sizing(border-box);
   .titleSite {
-    width: 30%; height: auto; margin: 0 0 0 0; padding: 0 10px; @include box-sizing(border-box);
+    width: 100%; height: auto; margin: 0 0 10px 0; padding: 0 10px; @include box-sizing(border-box);
     h5 {
-      margin: 20px 0 0 0; padding: 0; color: $col1; text-align: right; text-transform: uppercase; font-size: rem(15px);
+      margin: 15px 0 0 0; padding: 0; color: $col1; text-align: left; text-transform: uppercase; font-size: rem(14px);
     }
   }
   .descBox {
-    width: 70%; height: auto; margin: 0 0 0 0; padding: 0 10px; @include box-sizing(border-box); position: relative;
+    width: 100%; height: auto; margin: 0 0 0 0; padding: 0 10px; @include box-sizing(border-box); position: relative;
     h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 15px 0; font-size: rem(50px); display: block; color: $black; padding: 0; font-family: $light;
+      margin: 0 0 10px 0; font-size: rem(28px); display: block; color: $black; padding: 0; font-family: $light;
     }
-    p { text-align: left; margin: 0 0 0 0;color: $c7; font-size: rem(18px); }
+    p { text-align: left; margin: 0 0 0 0;color: $c7; font-size: rem(13px); line-height: 1.4; }
     .btnModuloOne {
-      width: auto; height: auto; padding: 0; margin: 0; @include position(absolute, null 0 0 null);
+      width: 100%; height: auto; padding: 0; margin: 20px 0 0 0; @include position(relative, null null null null);
       .btnsGenericos {
         height: 40px; color: $c9; border: 1px solid $c9; line-height: 40px;
         i {
@@ -123,13 +123,17 @@ article {
 
 
 @media only screen and (min-width: 360px) {
-  .descGen {
-    padding: 40px 25px 10px 0; margin: 0 0 20px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 15px 0; font-size: rem(25px);
-      span {
-        font-size: rem(50px);
+  .descHome {
+    .titleSite {
+      h5 {
+        font-size: rem(15px);
       }
+    }
+    .descBox {
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 20px 0; font-size: rem(30px);
+      }
+      p { margin: 0 0 0 0; font-size: rem(15px); }
     }
   }
 
@@ -144,16 +148,17 @@ article {
       }
     }
   }
-  .descGen {
-    padding: 30px 25px 10px 10px; margin: 0 0 10px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 30px 0; font-size: rem(35px);
-      span {
-        left: 66%; font-size: rem(50px); top: 30px; left: 50%;
+  .descHome {
+    .titleSite {
+      h5 {
+        font-size: rem(15px);
       }
-      &:before {
-        content: ''; width: 160px; height: 160px; top: -60px; left: -120px;
+    }
+    .descBox {
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 20px 0; font-size: rem(42px);
       }
+      p { margin: 0 0 0 0; font-size: rem(16px); }
     }
   }
 
@@ -182,16 +187,17 @@ article {
       }
     }
   }
-  .descGen {
-    padding: 55px 25px 15px 25px; margin: 0 0 20px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 80px 0; font-size: rem(40px);
-      span {
-        left: 66%; font-size: rem(50px); top: 10px;
+  .descHome {
+    .titleSite {
+      h5 {
+        font-size: rem(15px);
       }
-      &:before {
-        width: 200px; height: 200px; @include position(absolute, -80px null null -120px);
+    }
+    .descBox {
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 25px 0; font-size: rem(45px);
       }
+      p { margin: 0 0 0 0; font-size: rem(16px); }
     }
   }
 
@@ -209,17 +215,24 @@ article {
       }
     }
   }
-  .descGen {
-    padding: 55px 25px 15px 25px; margin: 0 0 20px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 80px 0; font-size: rem(50px);
-      span {
-        left: 66%; font-size: rem(75px); top: 0;
-      }
-      &:before {
-        width: 260px; height: 260px; @include position(absolute, -105px null null -140px);
+  .descHome {
+    @include displayFlex(flex, row, center, flex-start, wrap);
+    .titleSite {
+      width: 20%; padding: 0 10px;
+      h5 {
+        margin: 15px 0 0 0; text-align: right; font-size: rem(15px);
       }
     }
+    .descBox {
+      width: 80%; margin: 0 0 0 0; padding: 0 10px;
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 30px 0; font-size: rem(48px);
+      }
+      p { margin: 0 0 0 0; font-size: rem(17px); }
+    }
+  }
+  .contSlideRaquetas {
+    width: 100%; height: auto; padding: 0 0; margin: 0 0 0 0; position: relative; @include displayFlex(flex, row, center, center, wrap);
   }
 
 }
@@ -236,15 +249,21 @@ article {
       }
     }
   }
-  .descGen {
-    padding: 55px 25px 15px 25px; margin: 0 0 20px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 80px 0; font-size: rem(60px);
-      span {
-        left: 66%; font-size: rem(90px);
+  .descHome {
+    .titleSite {
+      width: 30%; padding: 0 10px;
+      h5 {
+        margin: 15px 0 0 0; text-align: right; font-size: rem(15px);
       }
-      &:before {
-        width: 280px; height: 280px; @include position(absolute, -120px null null -140px);
+    }
+    .descBox {
+      width: 70%; margin: 0 0 0 0; padding: 0 10px;
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 30px 0; font-size: rem(50px);
+      }
+      p { margin: 0 0 0 0; font-size: rem(18px); }
+      .btnModuloOne {
+        width: auto; height: auto; padding: 0; margin: 0; @include position(absolute, null 0 0 null);
       }
     }
   }
@@ -269,18 +288,6 @@ article {
     .contHero {
       h1, h2, h3, h4, h5, h6 {
         font-size: rem(53px);
-      }
-    }
-  }
-  .descGen {
-    padding: 55px 25px 15px 25px; margin: 0 0 20px 0;
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0 0 80px 0; font-size: rem(70px);
-      span {
-        left: 66%; font-size: rem(120px);
-      }
-      &:before {
-        width: 310px; height: 310px; @include position(absolute, -105px null null -140px);
       }
     }
   }

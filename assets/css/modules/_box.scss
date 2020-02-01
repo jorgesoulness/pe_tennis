@@ -9,19 +9,19 @@
   }
 }
 .boximgRaqueta {
-  width: 40%; height: auto; padding: 0; margin: 0; position: relative;
+  width: 55%; height: auto; padding: 0; margin: 0; position: relative;
   figure {
-    width: 100%; height: 450px; margin: 0; padding: 0; position: relative; overflow: hidden;
+    width: 100%; height: 300px; margin: 0; padding: 0; position: relative; overflow: hidden;
     img {
       width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
     }
     figcaption {
-      width: 100%; height: auto; padding: 0 20px 0 calc(50% - 60px); margin: 0 0; @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); z-index: 1; @include box-sizing(border-box);
+      width: 100%; height: auto; padding: 0 20px 0 calc(50% - 80px); margin: 0 0; @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); z-index: 1; @include box-sizing(border-box);
       h1, h2, h3, h4, h5, h6 {
-        margin: 0 0 15px 0; font-size: rem(50px); display: block; color: $white; padding: 0; font-family: $light; text-align: left;
+        margin: 0 0 15px 0; font-size: rem(22px); display: block; color: $white; padding: 0; font-family: $light; text-align: left;
         strong, b { font-family: $bold; }
       }
-      p { text-align: left; margin: 0 0 0 0; color: $white; font-size: rem(18px); }
+      p { text-align: left; margin: 0 0 0 0; color: $white; font-size: rem(13px); }
       .controlsSlide-dots {
         width: 100%; height: auto; padding: 0 0; margin: 15px 0 0 0; @include box-sizing(border-box);
         ul {
@@ -49,7 +49,7 @@
   }
 }
 .boxSlides {
-  width: 60%; height: auto; padding: 0; margin: 0; position: relative;
+  width: 45%; height: auto; padding: 0; margin: 0; position: relative;
   .slick-slide {
     @include box-sizing(border-box); padding: 10px 10px; margin: 0 0;
   }
@@ -59,29 +59,119 @@
       display: block; width: 100%; height: auto;
     }
     span {
-      width: 39px; height: 39px; background-color: $col1; padding: 0; margin: 0;line-height: 39px; text-align: center; color: $white; display: block; @include position(absolute, 5px null null 5px); @include border-top-radius(50%); @include border-bottom-radius(50%); z-index: 1;
+      width: 33px; height: 33px; background-color: $col1; padding: 0; margin: 0;line-height: 33px; text-align: center; color: $white; display: block; @include position(absolute, 5px null null 5px); @include border-top-radius(50%); @include border-bottom-radius(50%); z-index: 1;
     }
   }
 }
 
 
 @media only screen and (min-width: 360px) {
+  .boximgRaqueta {
+    figure {
+      width: 100%;
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 90px);
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(32px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(14px); }
+      }
+    }
+  }
   
 }
 
 @media only screen and (min-width: 480px) {
+  .boximgRaqueta {
+    figure {
+      width: 100%; height: 320px;
+      img {
+        width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+      }
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 80px); @include position(absolute, 50% null null 0); @include transform(translateY(-50%));
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(35px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(15px); }
+      }
+    }
+  }
 
 }
 
 @media only screen and (min-width: 576px) {
+  .boximgRaqueta {
+    figure {
+      width: 100%; height: 350px;
+      img {
+        width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+      }
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 80px); @include position(absolute, 50% null null 0); @include transform(translateY(-50%));
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(38px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(16px); }
+      }
+    }
+  }
 
 }
 
 @media only screen and (min-width: 768px) {
+  .boximgRaqueta {
+    width: 40%;
+    figure {
+      width: 100%; height: 350px;
+      img {
+        width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+      }
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 70px); @include position(absolute, 50% null null 0); @include transform(translateY(-50%));
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(40px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(16px); }
+      }
+    }
+  }
+  .boxSlides {
+    width: 60%; padding: 0; margin: 0;
+    .slideRaqueta {
+      span {
+        width: 35px; height: 35px; line-height: 35px;
+      }
+    }
+  }
 
 }
 
 @media only screen and (min-width: 992px) {
+  .boximgRaqueta {
+    width: 40%;
+    figure {
+      width: 100%; height: 380px;
+      img {
+        width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+      }
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 60px); @include position(absolute, 50% null null 0); @include transform(translateY(-50%));
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(45px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(17px); }
+      }
+    }
+  }
+  .boxSlides {
+    width: 60%; padding: 0; margin: 0;
+    .slideRaqueta {
+      span {
+        width: 39px; height: 39px; line-height: 39px;
+      }
+    }
+  }
 
 }
 
@@ -90,5 +180,29 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .boximgRaqueta {
+    width: 40%;
+    figure {
+      width: 100%; height: 450px;
+      img {
+        width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+      }
+      figcaption {
+        width: 100%; height: auto; padding: 0 20px 0 calc(50% - 60px); @include position(absolute, 50% null null 0); @include transform(translateY(-50%));
+        h1, h2, h3, h4, h5, h6 {
+          margin: 0 0 15px 0; font-size: rem(50px); text-align: left;
+        }
+        p { text-align: left; font-size: rem(18px); }
+      }
+    }
+  }
+  .boxSlides {
+    width: 60%; padding: 0; margin: 0;
+    .slideRaqueta {
+      span {
+        width: 39px; height: 39px; background-color: $col1; padding: 0; margin: 0;line-height: 39px; text-align: center; color: $white; display: block; @include position(absolute, 5px null null 5px); @include border-top-radius(50%); @include border-bottom-radius(50%); z-index: 1;
+      }
+    }
+  }
   
 }
