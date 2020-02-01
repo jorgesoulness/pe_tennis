@@ -8,6 +8,61 @@
     width: 100%; height: auto; padding: 0 0; margin: 0; display: block; object-fit: contain; font-family: "object-fit: contain";
   }
 }
+.boximgRaqueta {
+  width: 40%; height: auto; padding: 0; margin: 0; position: relative;
+  figure {
+    width: 100%; height: 450px; margin: 0; padding: 0; position: relative; overflow: hidden;
+    img {
+      width: 100%; height: 100%; display: block; margin: 0 0; padding: 0; object-fit: cover; font-family: "object-fit: cover";
+    }
+    figcaption {
+      width: 100%; height: auto; padding: 0 20px 0 calc(50% - 60px); margin: 0 0; @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); z-index: 1; @include box-sizing(border-box);
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 15px 0; font-size: rem(50px); display: block; color: $white; padding: 0; font-family: $light; text-align: left;
+        strong, b { font-family: $bold; }
+      }
+      p { text-align: left; margin: 0 0 0 0; color: $white; font-size: rem(18px); }
+      .controlsSlide-dots {
+        width: 100%; height: auto; padding: 0 0; margin: 15px 0 0 0; @include box-sizing(border-box);
+        ul {
+          width: 100%; height: auto; padding: 0; margin: 0; list-style-type: none; @include displayFlex(flex, row, center, center, wrap);
+          li {
+            list-style-type: none; margin-right: 10px;
+            button {
+              border: none; width: 8px; height: 8px; display: block; outline: none; background-color: rgba($white, 0.50); text-indent: -9999px; font-size: 0; @include border-top-radius(50%); @include border-bottom-radius(50%); padding: 0; margin: 0; cursor: pointer;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            &.slick-active {
+              button {
+                background-color: $col1;
+              }
+            }
+          }
+        }
+      }
+      .controlsSlide-btns {
+        width: 100%; height: auto; padding: 0 0; margin: 20px 0 0 0; @include box-sizing(border-box); @include displayFlex(flex, row, center, flex-start, wrap);
+      }
+    }
+  }
+}
+.boxSlides {
+  width: 60%; height: auto; padding: 0; margin: 0; position: relative;
+  .slick-slide {
+    @include box-sizing(border-box); padding: 10px 10px; margin: 0 0;
+  }
+  .slideRaqueta {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative;
+    img {
+      display: block; width: 100%; height: auto;
+    }
+    span {
+      width: 39px; height: 39px; background-color: $col1; padding: 0; margin: 0;line-height: 39px; text-align: center; color: $white; display: block; @include position(absolute, 5px null null 5px); @include border-top-radius(50%); @include border-bottom-radius(50%); z-index: 1;
+    }
+  }
+}
 
 
 @media only screen and (min-width: 360px) {
